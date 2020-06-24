@@ -65,7 +65,7 @@ void stackMenu() {
             cthStack.push(val);
 
             cout << "Dengan menjalankan perintah cthStack.push(" << val << "); anda menambahkan nilai " << val << " ke cthStack" << endl;
-            cout << endl << "(0) Kembali" << endl << "pilih : ";
+            cout << endl << "(0) Kembali : ";
 
             int back = 222;
             cin >> back;
@@ -79,7 +79,7 @@ void stackMenu() {
 
             int size = cthStack.size();
             cout << size << " adalah angka yang di return oleh 'cthStack.size();' artinya cthStack memiliki ukuran sebesar " << size << endl;
-            cout << endl << "(0) Kembali" << endl << "pilih : ";
+            cout << endl << "(0) Kembali : ";
 
             int back = 222;
             cin >> back;
@@ -92,7 +92,7 @@ void stackMenu() {
 
             int top = cthStack.top();
             cout << top << " adalah angka yang di return oleh 'cthStack.top();' artinya " << top << " adalah angka paling atas dalam stack" << endl;
-            cout << endl << "(0) Kembali" << endl << "pilih : ";
+            cout << endl << "(0) Kembali : ";
 
             int back = 222;
             cin >> back;
@@ -104,7 +104,7 @@ void stackMenu() {
             system("cls");
 
             cout << "dengan menjalankan 'cthStack.pop();' maka anda menghapus angka paling depan yaitu " << cthStack.top() << endl;
-            cout << endl << "(0) Kembali" << endl << "pilih : ";
+            cout << endl << "(0) Kembali : ";
             cthStack.pop();
 
             int back = 222;
@@ -121,12 +121,12 @@ void stackMenu() {
                 cout << " (Masih Kosong Silahkan Jalankan 'cthStack.push()' untuk menambahkan)"; 
             }
             
-            while (!cthStack.empty()) { 
-                cout << " " << cthStack.top(); 
-                cthStack.pop(); 
+            while (!cthStack.empty()) {  // sebelum cthStack kosong perintah akan di jalankan terus menerus hingga cthStack kosong
+                cout << " " << cthStack.top(); // perintah ini akan me return value paling atas dari cthStack
+                cthStack.pop(); // menghapus value paling atas dari cthStack
             }
 
-            cout << endl << "(0) Kembali" << endl << "pilih : ";
+            cout << endl << "(0) Kembali : ";
 
             int back = 222;
             cin >> back;
@@ -140,6 +140,7 @@ void stackMenu() {
 
 //   Queue Menu : Contoh Cara Kerja Queue   //
 void queueMenu() {
+    
 
 }
 
