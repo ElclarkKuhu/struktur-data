@@ -262,8 +262,8 @@ void queueMenu() {
     }
 }
 
-//   Short Menu : Contoh Cara Kerja Short   //
-void shortMenu() {
+//   Sort Menu : Contoh Cara Kerja Short   //
+void sortMenu() {
     system("cls");
     int back = 222;
     while (back != 0) {
@@ -295,8 +295,8 @@ int main() {
             stackMenu();
         } else if (exec == 2) { // jika nilain exec 2 maka jalankan queueMenu();
             queueMenu();
-        } else if (exec == 3) { // jika nilain exec 3 maka jalankan shortMenu();
-            shortMenu();
+        } else if (exec == 3) { // jika nilain exec 3 maka jalankan sortMenu();
+            sortMenu();
         } else if (exec == 4) { // jika nilain exec 4 maka jalankan searchMenu();
             searchMenu();
         }
