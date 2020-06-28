@@ -1,15 +1,20 @@
 #include <iostream>
 #include <string>
-#include <stack>
-#include <queue>
 
-/////////////////////////////////////////////////////
-//                                                 //
-//      Made With Love By Elclark And Team ;)      //
-//              Coded On C++ Win32                 //
-//            Only Working On Windows              //
-//                                                 //
-/////////////////////////////////////////////////////
+#include <stack> // library yang di perlukan oleh stack
+#include <queue> // library yang dibutuhkan oleh queue
+#include <array> // library yang dibutuhkan oleh array
+#include <algorithm> // library yang dibutuhkan oleh sort dan search
+
+ /////////////////////////////////////////////////////
+ //                                                 //
+ //      Made With Love By Elclark And Team ;)      //
+ //              Coded On C++ Win32                 //
+ //            Only Working On Windows              //
+ //                                                 //
+ //            https://elclark.my.id/               //
+ //                                                 //
+ /////////////////////////////////////////////////////
 
 using namespace std;
 
@@ -17,15 +22,14 @@ using namespace std;
 //  Main Menu : menu untuk memilih contoh  //
 int mainMenu() {
     int choose = 0;
-    cout << "= = =" << endl;
+    cout << "= = = =" << endl;
     cout << "= Program Contoh Materi Structure Data" << endl;
     cout << "= = =" << endl << endl;
 
-    cout << "1. Stack (Tumpukan)" << endl;
-    cout << "2. Queue (Antrian)" << endl;
-    cout << "3. Short (Penyortiran)" << endl;
-    cout << "4. Search (Pencarian)" << endl;
-    cout << "5. Tree" << endl;
+    cout << " (1) Stack (Tumpukan)" << endl;
+    cout << " (2) Queue (Antrian)" << endl;
+    cout << " (3) Sort (Penyortiran)" << endl;
+    cout << " (4) Search (Pencarian)" << endl << endl;
     cout << "Silahlan Masukan Pilihan (0 Untuk Keluar) : ";
     cin >> choose;
 
@@ -37,15 +41,15 @@ int mainMenu() {
 //   Stack Menu : Contoh Cara Kerja Stack   //
 void stackMenu() {
     system("cls");
-    int exec = 222;
-    int back = 222;
+    int exec = 222; // insialisasi nilai exec dengan 222 agar tidak conflic
+    int back = 222; // insialisasi nilai back dengan 222 agar tidak conflic
 
     stack <int> cthStack; // inisialisasi stack dengan nama cthStack
     // DI Inisialise diluar while agar tidak ter reinisialate dan valuenya hilang semua
 
     while (exec != 0) {
 
-        cout << "= = =" << endl;
+        cout << "= = = =" << endl;
         cout << "= Contoh Cara Kerja Stack" << endl;
         cout << "= = =" << endl << endl;
 
@@ -104,6 +108,7 @@ void stackMenu() {
 
                 system("cls");
             }
+            back = 222;
         } else if (exec == 4) { // jika nilain exec 4 maka jalankan cthStack.pop();
             system("cls");
             while (back != 0) { // selama back bukan 0 maka perintah akan di ulang
@@ -142,15 +147,15 @@ void stackMenu() {
 //   Queue Menu : Contoh Cara Kerja Queue   //
 void queueMenu() {
     system("cls");
-    int exec = 222;
-    int back = 222;
+    int exec = 222; // insialisasi nilai exec dengan 222 agar tidak conflic
+    int back = 222; // insialisasi nilai back dengan 222 agar tidak conflic
 
     queue <int> cthQueue; // inisialisasi stack dengan nama cthStack
     // DI Inisialise diluar while agar tidak ter reinisialate dan valuenya hilang semua
 
     while (exec != 0) {
 
-        cout << "= = =" << endl;
+        cout << "= = = =" << endl;
         cout << "= Contoh Cara Kerja Queue" << endl;
         cout << "= = =" << endl << endl;
 
@@ -211,7 +216,7 @@ void queueMenu() {
 
                 system("cls");
             }
-            int back = 222;
+            back = 222;
         } else if (exec == 4) { // jika nilain exec 4 maka jalankan cthQueue.back();
             system("cls");
             while (back != 0) { // selama back bukan 0 maka perintah akan di ulang
@@ -222,7 +227,7 @@ void queueMenu() {
                 cin >> back;
                 system("cls");
             }
-            int back = 222;
+            back = 222;
         } else if (exec == 5) { // jika nilain exec 5 maka jalankan cthQueue.pop();
             system("cls");
             while (back != 0) { // selama back bukan 0 maka perintah akan di ulang
@@ -262,15 +267,36 @@ void queueMenu() {
     }
 }
 
-//   Sort Menu : Contoh Cara Kerja Short   //
+//   Sort Menu : Contoh Cara Kerja Sort   //
 void sortMenu() {
     system("cls");
-    int back = 222;
+    int back = 222; // insialisasi nilai back dengan 222 agar tidak conflic
     while (back != 0) {
-        cout << "Work In Progress" << endl ;
-        cout << endl << "(0) Kembali : ";
+        cout << "Petama kita inisialisasi array yang ingin kita short :" << endl;
+        cout << "  array <int, 10> angka = {9,4,6,7,8,1,3,2,5,0};" << endl;
+        cout << "Kali ini kita menggunakan ukuran array 10 aja sebagai contoh" << endl << endl;
 
+        array <int, 10> angka = {9,4,6,7,8,1,3,2,5,0};
+
+        cout << "Array 'angka' sebelum di sort : " << endl;
+        for(int &a : angka){
+            cout << a << " ";
+        }
+        cout << endl << endl;
+
+        cout << "Dengan menjalankan perintah ini anda mengurutkan array 'angka' dari terendah ke tertinggi" << endl;
+        cout << "sort(angka.begin(), angka.end());" << endl << endl;
+        sort(angka.begin(), angka.end());
+
+        cout << "Array 'angka' setelah di sort : " << endl;
+        for(int &b : angka){
+            cout << b << " ";
+        }
+        cout << endl;
+
+        cout << endl << "(0) Kembali : ";
         cin >> back;
+
         system("cls");
     }
 }
@@ -278,12 +304,40 @@ void sortMenu() {
 //   Search Menu : Contoh Cara Kerja Search   //
 void searchMenu() {
     system("cls");
-    int back = 222;
+    int back = 222; // insialisasi nilai back dengan 222 agar tidak conflic
     while (back != 0) {
-        cout << "Work In Progress" << endl ;
-        cout << endl << "(0) Kembali : ";
+        cout << "Petama kita inisialisasi array yang ingin kita search :" << endl;
+        cout << "  array <int, 10> angka = {9,4,6,7,8,1,3,2,5,0};" << endl;
+        cout << "Kali ini kita menggunakan ukuran array 10 aja sebagai contoh" << endl << endl;
 
+        array <int, 10> angka = {9,4,6,7,8,1,3,2,5,0};
+            int angkaCari;
+        bool ditemukan;
+
+        cout << "Sebelum di search array harus di sort dulu dengan cara berikut :" << endl;
+        cout << "sort(angka.begin(), angka.end());" << endl << endl;
+        sort(angka.begin(), angka.end());
+
+        cout << "cari angka dari array di atas : ";
+        cin >> angkaCari;
+        cout << endl;
+
+        cout << "Untuk mencari angka dari array di atas kita perlu menjalankan :" << endl;
+        cout << "binary_search(angka.begin(), angka.end(), angkaCari);" << endl;
+        cout << "'angkaCari' adalah value yang ingin di cari dari array di atas" << endl << endl;
+
+        ditemukan = binary_search(angka.begin(), angka.end(), angkaCari);
+
+        cout << "Hasil dari pencarian : " << endl;
+        if (ditemukan){
+            cout << angkaCari << " ditemukan" << endl;	
+        } else {
+            cout << angkaCari << " tidak ditemukan" << endl;	
+        }
+
+        cout << endl << "(0) Kembali : ";
         cin >> back;
+
         system("cls");
     }
 }
